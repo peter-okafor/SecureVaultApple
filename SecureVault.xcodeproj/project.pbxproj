@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CEE9F85D2EB616E300A4F63C /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = CEE9F85C2EB616E300A4F63C /* SQLite */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CEE9F81D2EB60C1700A4F63C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		CEE9F80E2EB60C1500A4F63C /* SecureVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE9F81C2EB60C1700A4F63C /* SecureVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE9F8262EB60C1700A4F63C /* SecureVaultUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureVaultUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE9F83C2EB6127700A4F63C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.4.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE9F85D2EB616E300A4F63C /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,7 @@
 				CEE9F8102EB60C1500A4F63C /* SecureVault */,
 				CEE9F81F2EB60C1700A4F63C /* SecureVaultTests */,
 				CEE9F8292EB60C1700A4F63C /* SecureVaultUITests */,
+				CEE9F83B2EB6127700A4F63C /* Frameworks */,
 				CEE9F80F2EB60C1500A4F63C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +97,14 @@
 				CEE9F8262EB60C1700A4F63C /* SecureVaultUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CEE9F83B2EB6127700A4F63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9F83C2EB6127700A4F63C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +127,7 @@
 			);
 			name = SecureVault;
 			packageProductDependencies = (
+				CEE9F85C2EB616E300A4F63C /* SQLite */,
 			);
 			productName = SecureVault;
 			productReference = CEE9F80E2EB60C1500A4F63C /* SecureVault.app */;
@@ -195,6 +211,9 @@
 			);
 			mainGroup = CEE9F8052EB60C1500A4F63C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CEE9F85B2EB6164200A4F63C /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEE9F80F2EB60C1500A4F63C /* Products */;
 			projectDirPath = "";
@@ -593,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEE9F85B2EB6164200A4F63C /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEE9F85C2EB616E300A4F63C /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEE9F85B2EB6164200A4F63C /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEE9F8062EB60C1500A4F63C /* Project object */;
 }

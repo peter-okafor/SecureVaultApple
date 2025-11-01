@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SecureVaultApp: App {
+    @StateObject private var authManager = AuthenticationManager()
+    @StateObject private var vaultManager = VaultManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authManager)
+                .environmentObject(vaultManager)
+                .frame(minWidth: 800, minHeight: 600)
         }
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
     }
 }
