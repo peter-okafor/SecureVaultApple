@@ -1,3 +1,10 @@
+//
+//  Models.swift
+//  SecureVault
+//
+//  Created by Peter Okafor on 01/11/2025.
+//
+
 import Foundation
 
 // MARK: - Item Type Enum
