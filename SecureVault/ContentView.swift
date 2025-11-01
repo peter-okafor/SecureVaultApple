@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    // @EnvironmentObject var authManager: AuthenticationManager
-    // @EnvironmentObject var vaultManager: VaultManager
+     @EnvironmentObject var authManager: AuthenticationManager
+     @EnvironmentObject var vaultManager: VaultManager
 
     var body: some View {
         ZStack {
@@ -73,3 +73,7 @@ struct LockScreenView: View {
         .background(Color(.windowBackgroundColor))
     }
 }
+
+//#Preview {
+//    ContentView()
+//}
